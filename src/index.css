@@ -274,6 +274,43 @@
     }
   }
 
+  /* Wave animations */
+  @keyframes wave-move-1 {
+    0% {
+      transform: translateX(-100%);
+    }
+    50% {
+      transform: translateX(0%);
+    }
+    100% {
+      transform: translateX(100%);
+    }
+  }
+
+  @keyframes wave-move-2 {
+    0% {
+      transform: translateX(-100%);
+    }
+    50% {
+      transform: translateX(-10%);
+    }
+    100% {
+      transform: translateX(100%);
+    }
+  }
+
+  @keyframes wave-move-3 {
+    0% {
+      transform: translateX(-100%);
+    }
+    50% {
+      transform: translateX(-5%);
+    }
+    100% {
+      transform: translateX(100%);
+    }
+  }
+
   /* Scrollbar styling */
   .scrollbar-spotify::-webkit-scrollbar {
     width: 8px;

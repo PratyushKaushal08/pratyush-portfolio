@@ -43,7 +43,7 @@ const colorThemes = {
 };
 
 export const ThemeProvider = ({ children }: { children: ReactNode }) => {
-  const [currentTheme, setCurrentTheme] = useState<ThemeColor>('default');
+  const [currentTheme, setCurrentTheme] = useState<ThemeColor>('green');
 
   const setTheme = (theme: ThemeColor) => {
     setCurrentTheme(theme);
@@ -59,10 +59,12 @@ export const ThemeProvider = ({ children }: { children: ReactNode }) => {
   };
 
   useEffect(() => {
-    // Load saved theme from localStorage
+    // Load saved theme from localStorage or default to green
     const savedTheme = localStorage.getItem('preferred-theme') as ThemeColor;
     if (savedTheme && colorThemes[savedTheme]) {
       setTheme(savedTheme);
+    } else {
+      setTheme('green'); // Default to green
     }
   }, []);
 

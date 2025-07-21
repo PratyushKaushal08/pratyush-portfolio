@@ -7,10 +7,13 @@ import Certifications from "@/components/Certifications";
 import Contact from "@/components/Contact";
 import MusicPlayer from "@/components/MusicPlayer";
 import ColorThemePicker from "@/components/ColorThemePicker";
+import AnimatedWaves from "@/components/AnimatedWaves";
 
 const Index = () => {
   return (
-    <div className="min-h-screen bg-gradient-hero scrollbar-spotify">
+    <div className="min-h-screen bg-gradient-hero scrollbar-spotify relative">
+      <AnimatedWaves />
+      
       <Navigation />
       
       <main className="relative">
