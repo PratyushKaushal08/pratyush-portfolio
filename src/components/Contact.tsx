@@ -15,19 +15,19 @@ const Contact = () => {
     {
       icon: <Mail className="w-5 h-5" />,
       label: "Email",
-      value: "kaushalpratyush04@gmail.com",
-      href: "mailto:kaushalpratyush04@gmail.com"
+      value: "kaushalpratyush08@gmail.com",
+      href: "mailto:kaushalpratyush08@gmail.com"
     },
     {
       icon: <Phone className="w-5 h-5" />,
       label: "Phone",
-      value: "+91 9060947477",
-      href: "tel:+919060947477"
+      value: "+91 9006917477",
+      href: "tel:+919006917477"
     },
     {
       icon: <MapPin className="w-5 h-5" />,
       label: "Location",
-      value: "Vellore, Tamil Nadu",
+      value: "Bangalore, Karnataka",
       href: null
     }
   ];
@@ -36,19 +36,19 @@ const Contact = () => {
     {
       icon: <Github className="w-5 h-5" />,
       label: "GitHub",
-      href: "https://github.com/smartinternz02",
+      href: "https://github.com/PratyushKaushal08",
       color: "hover:text-gray-400"
     },
     {
       icon: <Linkedin className="w-5 h-5" />,
       label: "LinkedIn",
-      href: "https://linkedin.com/in/pratyush-kaushal",
+      href: "https://www.linkedin.com/in/pratyush-kaushal-4724a224b/",
       color: "hover:text-blue-400"
     },
     {
       icon: <FileText className="w-5 h-5" />,
       label: "Resume",
-      href: "/resume.pdf",
+      href: "https://drive.google.com/file/d/1etIzbguOohfl6kcWMGvcVL6tM37xsojt/view?usp=sharing",
       color: "hover:text-primary"
     }
   ];

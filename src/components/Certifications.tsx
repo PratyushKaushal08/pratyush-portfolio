@@ -181,6 +181,24 @@ const Certifications = () => {
             ))}
           </div>
         </div>
+
+        {/* More Certifications Link */}
+        <div className="text-center mt-12 animate-fade-up" style={{ animationDelay: "1s" }}>
+          <div className="p-6 rounded-xl bg-gradient-card border border-primary/20">
+            <h4 className="text-lg font-semibold mb-3">More Certifications Available</h4>
+            <p className="text-muted-foreground mb-4">
+              Explore additional certifications and achievements in my certification portfolio.
+            </p>
+            <Button
+              variant="outline"
+              className="border-primary/30 hover:bg-primary/10"
+              onClick={() => window.open('https://drive.google.com/drive/folders/1aN45igMdJnAKQQbFAPxHM6bSb-mwoBZZ?usp=sharing', '_blank')}
+            >
+              <Award className="w-4 h-4 mr-2" />
+              View All Certifications
+            </Button>
+          </div>
+        </div>
       </div>
     </section>
   );

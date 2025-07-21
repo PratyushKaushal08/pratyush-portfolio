@@ -116,21 +116,11 @@ const Projects = () => {
                   <div className="flex gap-3 pt-4">
                     <Button
                       size="sm"
-                      className="bg-gradient-spotify hover:bg-gradient-spotify/90 text-xs flex-1"
+                      className="bg-gradient-spotify hover:bg-gradient-spotify/90 text-xs w-full"
                       onClick={() => window.open(project.github, '_blank')}
                     >
                       <Github className="w-3 h-3 mr-2" />
-                      Code
-                    </Button>
-                    
-                    <Button
-                      variant="outline"
-                      size="sm"
-                      className="border-primary/30 hover:bg-primary/10 text-xs flex-1"
-                      onClick={() => window.open(project.github, '_blank')}
-                    >
-                      <ExternalLink className="w-3 h-3 mr-2" />
-                      Demo
+                      View Code
                     </Button>
                   </div>
                 </CardContent>
@@ -150,7 +140,7 @@ const Projects = () => {
             <Button
               variant="outline"
               className="border-primary/30 hover:bg-primary/10"
-              onClick={() => window.open('https://github.com/smartinternz02', '_blank')}
+              onClick={() => window.open('https://github.com/PratyushKaushal08', '_blank')}
             >
               <Github className="w-4 h-4 mr-2" />
               View All on GitHub

@@ -7,7 +7,7 @@ const Experience = () => {
     {
       company: "Vegam Solutions",
       role: "Web Development Intern",
-      period: "Jan 25 - Present",
+      period: "Jun 25 - Present",
       type: "Internship",
       description: [
         "Developed and deployed company website using GenAI-powered tools like Lovable, Supabase, and Superhog",
