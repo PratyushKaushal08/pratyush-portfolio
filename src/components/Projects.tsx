@@ -15,7 +15,7 @@ const Projects = () => {
       ],
       tech: ["JavaScript", "HTML", "CSS", "Socket.io", "Node.js"],
       icon: <Code2 className="w-6 h-6" />,
-      github: "https://github.com/smartinternz02/SI-GuidedProject-594299-1697642990",
+      github: "https://github.com/PratyushKaushal08/Jot-It-Down",
       color: "from-blue-500/20 to-cyan-500/20"
     },
     {
@@ -28,7 +28,7 @@ const Projects = () => {
       ],
       tech: ["Python", "LSTM", "Scikit-learn", "Pandas", "TensorFlow"],
       icon: <TrendingUp className="w-6 h-6" />,
-      github: "https://github.com/smartinternz02/SI-GuidedProject-594299-1697642990",
+      github: "https://github.com/PratyushKaushal08/Stock-Price-Prediction",
       color: "from-green-500/20 to-emerald-500/20"
     },
     {
@@ -66,7 +66,7 @@ const Projects = () => {
               className="animate-fade-up hover-lift group"
               style={{ animationDelay: `${index * 0.2}s` }}
             >
-              <Card className="bg-gradient-card border-primary/20 shadow-card hover:shadow-spotify transition-all duration-500 h-full overflow-hidden relative">
+              <Card className="bg-gradient-card border-primary/20 shadow-card hover:shadow-spotify transition-all duration-500 h-full overflow-hidden relative flex flex-col">
                 {/* Gradient overlay */}
                 <div className={`absolute inset-0 bg-gradient-to-br ${project.color} opacity-0 group-hover:opacity-100 transition-opacity duration-300`} />
                 
@@ -85,7 +85,7 @@ const Projects = () => {
                   </p>
                 </CardHeader>
 
-                <CardContent className="relative z-10 space-y-6">
+                <CardContent className="relative z-10 space-y-6 flex-1 flex flex-col">
                   {/* Detailed description */}
                   <div className="space-y-3">
                     {project.longDescription.map((item, i) => (
@@ -97,7 +97,7 @@ const Projects = () => {
                   </div>
 
                   {/* Technologies */}
-                  <div className="space-y-3">
+                  <div className="space-y-3 flex-1">
                     <h4 className="text-sm font-medium text-foreground">Technologies Used</h4>
                     <div className="flex flex-wrap gap-2">
                       {project.tech.map((tech) => (
@@ -112,8 +112,8 @@ const Projects = () => {
                     </div>
                   </div>
 
-                  {/* Action buttons */}
-                  <div className="flex gap-3 pt-4">
+                  {/* Action buttons - always at bottom */}
+                  <div className="mt-auto pt-4">
                     <Button
                       size="sm"
                       className="bg-gradient-spotify hover:bg-gradient-spotify/90 text-xs w-full"
