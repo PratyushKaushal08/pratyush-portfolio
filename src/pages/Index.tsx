@@ -6,6 +6,7 @@ import Projects from "@/components/Projects";
 import Certifications from "@/components/Certifications";
 import Contact from "@/components/Contact";
 import MusicPlayer from "@/components/MusicPlayer";
+import ColorThemePicker from "@/components/ColorThemePicker";
 
 const Index = () => {
   return (
@@ -39,6 +40,7 @@ const Index = () => {
       </main>
       
       <MusicPlayer />
+      <ColorThemePicker />
     </div>
   );
 };
