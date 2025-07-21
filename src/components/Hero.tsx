@@ -20,7 +20,7 @@ const Hero = () => {
           {/* Name and title with animation */}
           <div className="space-y-4 animate-fade-up">
             <Badge variant="outline" className="bg-card/50 backdrop-blur-sm border-primary/30 text-primary font-medium px-4 py-2">
-              Software Developer
+              Full Stack Developer & ML Engineer
             </Badge>
             
             <h1 className="text-6xl md:text-8xl font-bold bg-gradient-to-r from-foreground via-primary to-accent bg-clip-text text-transparent animate-glow">
@@ -28,7 +28,7 @@ const Hero = () => {
             </h1>
             
             <p className="text-2xl md:text-3xl text-muted-foreground font-light">
-              Full Stack Developer & ML Engineer
+              Software Developer
             </p>
           </div>
 
@@ -44,11 +44,11 @@ const Hero = () => {
             <div className="flex flex-wrap justify-center gap-4 text-sm text-muted-foreground">
               <div className="flex items-center gap-2">
                 <Mail className="w-4 h-4" />
-                kaushalpratyush04@gmail.com
+                kaushalpratyush08@gmail.com
               </div>
               <div className="flex items-center gap-2">
                 <span>📱</span>
-                +91 9060947477
+                +91 9006917477
               </div>
             </div>
           </div>
@@ -77,7 +77,7 @@ const Hero = () => {
           {/* Social links */}
           <div className="flex justify-center gap-6 animate-fade-up" style={{ animationDelay: "0.6s" }}>
             <a 
-              href="https://github.com/smartinternz02" 
+              href="https://github.com/PratyushKaushal08" 
               target="_blank" 
               rel="noopener noreferrer"
               className="p-3 rounded-full bg-card/50 backdrop-blur-sm border border-primary/20 hover:border-primary/50 hover:bg-primary/10 transition-all duration-300 hover-lift"
@@ -86,7 +86,7 @@ const Hero = () => {
             </a>
             
             <a 
-              href="https://linkedin.com/in/pratyush-kaushal" 
+              href="https://www.linkedin.com/in/pratyush-kaushal-4724a224b/" 
               target="_blank" 
               rel="noopener noreferrer"
               className="p-3 rounded-full bg-card/50 backdrop-blur-sm border border-primary/20 hover:border-primary/50 hover:bg-primary/10 transition-all duration-300 hover-lift"
@@ -95,7 +95,7 @@ const Hero = () => {
             </a>
             
             <a 
-              href="/resume.pdf" 
+              href="https://drive.google.com/file/d/1etIzbguOohfl6kcWMGvcVL6tM37xsojt/view" 
               target="_blank" 
               rel="noopener noreferrer"
               className="p-3 rounded-full bg-card/50 backdrop-blur-sm border border-primary/20 hover:border-primary/50 hover:bg-primary/10 transition-all duration-300 hover-lift"
