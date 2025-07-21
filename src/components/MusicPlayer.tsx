@@ -1,20 +1,34 @@
 import { useState, useRef, useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
-import { Play, Pause, Volume2, VolumeX, Move } from "lucide-react";
+import { Play, Pause, Volume2, VolumeX, Move, SkipForward } from "lucide-react";
 
 const MusicPlayer = () => {
   const [isPlaying, setIsPlaying] = useState(false);
   const [isMuted, setIsMuted] = useState(false);
   const [volume, setVolume] = useState(0.3);
+  const [currentTrack, setCurrentTrack] = useState(0);
   const [position, setPosition] = useState({ x: window.innerWidth - 200, y: window.innerHeight - 150 });
   const [isDragging, setIsDragging] = useState(false);
   const [dragOffset, setDragOffset] = useState({ x: 0, y: 0 });
   const audioRef = useRef<HTMLAudioElement>(null);
   const playerRef = useRef<HTMLDivElement>(null);
 
-  // Using a free ambient music from Pixabay (royalty-free)
-  const audioSrc = "https://cdn.pixabay.com/audio/2022/05/27/audio_1808fbf07a.mp3";
+  // Multiple NCS tracks
+  const tracks = [
+    {
+      name: "Ambient Vibes",
+      src: "https://cdn.pixabay.com/audio/2022/05/27/audio_1808fbf07a.mp3"
+    },
+    {
+      name: "Chill Lofi",
+      src: "https://cdn.pixabay.com/audio/2022/03/15/audio_c2d728b5b4.mp3"
+    },
+    {
+      name: "Dreamy Synth",
+      src: "https://cdn.pixabay.com/audio/2021/08/04/audio_12b0c7443e.mp3"
+    }
+  ];
 
   useEffect(() => {
     if (audioRef.current) {
@@ -84,6 +98,22 @@ const MusicPlayer = () => {
     }
   };
 
+  const nextTrack = () => {
+    const wasPlaying = isPlaying;
+    setIsPlaying(false);
+    setCurrentTrack((prev) => (prev + 1) % tracks.length);
+    
+    // Resume playing if it was playing before
+    if (wasPlaying) {
+      setTimeout(() => {
+        if (audioRef.current) {
+          audioRef.current.play().catch(console.error);
+          setIsPlaying(true);
+        }
+      }, 100);
+    }
+  };
+
   const handleVolumeChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const newVolume = parseFloat(e.target.value);
     setVolume(newVolume);
@@ -104,7 +134,7 @@ const MusicPlayer = () => {
       onMouseDown={handleMouseDown}
     >
       <Card className="bg-card/90 backdrop-blur-sm border-primary/20 shadow-lg p-4 hover:shadow-xl transition-shadow">
-        <div className="flex items-center gap-3">
+        <div className="flex items-center gap-2">
           <div className="flex items-center gap-1 text-muted-foreground">
             <Move className="w-3 h-3" />
           </div>
@@ -120,6 +150,16 @@ const MusicPlayer = () => {
             ) : (
               <Play className="w-4 h-4" />
             )}
+          </Button>
+          
+          <Button
+            onClick={nextTrack}
+            size="sm"
+            variant="ghost"
+            className="p-2 hover:bg-primary/20 rounded-full"
+            onMouseDown={(e) => e.stopPropagation()}
+          >
+            <SkipForward className="w-4 h-4" />
           </Button>
           
           <Button
@@ -151,18 +191,27 @@ const MusicPlayer = () => {
           />
         </div>
         
-        {isPlaying && (
-          <div className="text-xs text-muted-foreground mt-2 animate-pulse">
-            🎵 Ambient vibes
-          </div>
-        )}
+        {/* Track info */}
+        <div className="text-xs text-muted-foreground mt-2 flex items-center justify-between">
+          <span className="truncate">🎵 {tracks[currentTrack].name}</span>
+          {isPlaying && (
+            <div className="flex gap-1">
+              <div className="w-1 h-3 bg-primary animate-pulse"></div>
+              <div className="w-1 h-3 bg-primary animate-pulse" style={{ animationDelay: "0.2s" }}></div>
+              <div className="w-1 h-3 bg-primary animate-pulse" style={{ animationDelay: "0.4s" }}></div>
+            </div>
+          )}
+        </div>
       </Card>
 
       <audio
         ref={audioRef}
-        src={audioSrc}
+        src={tracks[currentTrack].src}
         preload="metadata"
-        onEnded={() => setIsPlaying(false)}
+        onEnded={() => {
+          setIsPlaying(false);
+          nextTrack(); // Auto-play next track
+        }}
       />
     </div>
   );

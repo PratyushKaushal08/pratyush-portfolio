@@ -57,7 +57,7 @@ const Hero = () => {
           <div className="flex flex-wrap justify-center gap-4 animate-fade-up" style={{ animationDelay: "0.4s" }}>
             <Button 
               size="lg" 
-              className="bg-gradient-spotify hover:bg-gradient-spotify/90 shadow-spotify hover-lift"
+              className="bg-primary hover:bg-primary/90 text-primary-foreground shadow-lg hover-lift"
               onClick={() => handleScrollToSection('projects')}
             >
               View My Work
@@ -67,7 +67,7 @@ const Hero = () => {
             <Button 
               variant="outline" 
               size="lg" 
-              className="border-primary/30 hover:bg-primary/10 hover-lift"
+              className="border-primary/50 text-primary hover:bg-primary hover:text-primary-foreground hover-lift"
               onClick={() => handleScrollToSection('contact')}
             >
               Get In Touch
