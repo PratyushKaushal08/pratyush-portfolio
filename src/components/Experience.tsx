@@ -10,19 +10,19 @@ const Experience = () => {
       period: "Jun 25 - Present",
       type: "Internship",
       description: [
-        "Developed and deployed company website using GenAI-powered tools like Lovable, Supabase, and Superhog",
-        "Built responsive service-integrated CRM for lead tracking and ensured smooth hosting on AWS infrastructure",
-        "Currently maintaining and enhancing the live product at auditing.com and contributing to the Vegam main website"
+        "Developed and deployed company website using GenAI-powered tools like Lovable, Supabase, and Superblog",
+        "Built responsive sections, integrated CMS for dynamic updates, and ensured smooth hosting on AWS infrastructure",
+        "Currently maintaining and enhancing the live product at aiintime.com and contributing to the Vegam main website"
       ],
-      skills: ["React", "Supabase", "AWS", "CRM", "GenAI"]
+      skills: ["React", "Supabase", "AWS", "CMS", "GenAI"]
     },
     {
-      company: "Soch Analytics Pvt Ltd (SALD)",
+      company: "Steel Authority of India Limited (SAIL)",
       role: "Software Development Intern",
       period: "Aug 23 - Sep 23",
       type: "Internship",
       description: [
-        "Optimized digital reserve allocation system to improve coordination and reduce approval delays across departments",
+        "Optimized digital resource allocation system to improve coordination and reduce approval delays across departments",
         "Designed responsive web application to streamline workflows and enhance resource tracking with improved UI",
         "Enhanced data organization and accessibility features, resulting in improved transparency and user experience"
       ],
