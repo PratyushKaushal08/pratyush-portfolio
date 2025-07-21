@@ -203,7 +203,7 @@ const Contact = () => {
         {/* Footer */}
         <div className="text-center mt-20 pt-8 border-t border-primary/20 animate-fade-up" style={{ animationDelay: "0.6s" }}>
           <p className="text-muted-foreground">
-            © 2024 Pratyush Kaushal. Built with ❤️ using React & Tailwind CSS
+            © 2024 Pratyush Kaushal. Built with ❤️ using React & Tailwind CSS — hits different, like your favorite Spotify track.
           </p>
         </div>
       </div>

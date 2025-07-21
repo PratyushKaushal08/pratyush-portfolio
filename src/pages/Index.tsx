@@ -5,6 +5,7 @@ import Experience from "@/components/Experience";
 import Projects from "@/components/Projects";
 import Certifications from "@/components/Certifications";
 import Contact from "@/components/Contact";
+import MusicPlayer from "@/components/MusicPlayer";
 
 const Index = () => {
   return (
@@ -36,6 +37,8 @@ const Index = () => {
           <Contact />
         </div>
       </main>
+      
+      <MusicPlayer />
     </div>
   );
 };
